@@ -1,0 +1,18 @@
+---
+# Only an empty front matter block is needed
+---
+
+/* 1. Typography & Colors */
+$background-color: #f2f5f3;
+$text-color:       #1f2923;
+$muted-text-color: #5e6d63;
+$link-color:       #1b5e45;
+$link-color-hover: #009e73;
+$border-color:     #dce3de;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // Load base skin
+@import "minimal-mistakes"; // Load theme
+
+/* Custom color overrides */
+$link-color: #0072b2; // Custom link color (e.g., Okabe-Ito blue)
+$link-color-hover: #d55e00; // Hover color (e.g., Okabe-Ito vermillion)
