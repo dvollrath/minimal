@@ -16,3 +16,77 @@ $border-color:     #dce3de;
 /* Custom color overrides */
 $link-color: #0072b2; // Custom link color (e.g., Okabe-Ito blue)
 $link-color-hover: #d55e00; // Hover color (e.g., Okabe-Ito vermillion)
+
+/* Force Larger Square Avatar */
+.author__avatar {
+  width: 200px !important;       /* Set explicit desired size */
+  max-width: 100% !important;
+  margin: 0 auto 1.25rem auto !important;
+
+  img {
+    width: 200px !important;     /* Match the wrapper */
+    height: 200px !important;    /* Forces 1:1 square */
+    max-width: none !important;  /* Bypasses any upstream max-width limits */
+    border-radius: 0 !important; /* Square corners */
+    object-fit: cover !important;/* Avoids distortion if image isn't exact square */
+  }
+}
+
+/* Optional: Adjust spacing below larger avatar */
+.author__content {
+  margin-top: 1rem;
+}
+
+/* Optional: Keep avatar centered or left-aligned */
+.author__avatar {
+  margin: 0 auto 1rem auto; /* Centers the square image in the sidebar */
+}
+
+/* ==========================================================================
+   Expanded Desktop Layout & Fixed Left Sidebar
+   ========================================================================== */
+
+/* 1. Expand the overall site width on desktop screens */
+@include breakpoint($large) {
+  #main {
+    display: flex !important;
+    max-width: 1200px !important; /* Expands site width (change to 1600px for wider) */
+    margin: 0 auto !important;     /* Centers the entire layout on screen */
+    padding: 0 2.5rem !important;  /* Comfortable outer margins */
+    gap: 3.5rem;                   /* Gutter between sidebar and main content */
+  }
+
+  /* 2. Lock the sidebar to a comfortable width on the left */
+  .sidebar {
+    float: none !important;
+    width: 260px !important;
+    min-width: 260px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 3. Avatar sizing */
+  .sidebar .author__avatar {
+    width: 240px !important;
+    max-width: 240px !important;
+    margin: 0 auto 1.25rem auto !important;
+
+    img {
+      width: 240px !important;
+      height: 240px !important;
+      border-radius: 0 !important;
+      object-fit: cover !important;
+    }
+  }
+
+  /* 4. Let the main content fill the rest of the available width */
+  .page,
+  .archive {
+    float: none !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

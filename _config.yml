@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Minimal test site
+title: Dietrich Vollrath
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   This is my personal site.
 github_username: dvollrath
-minimal_mistakes_skin: air
+minimal_mistakes_skin: default
 search: true
 
 # Build settings
@@ -50,13 +50,17 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/ernie.jpeg"
-  bio    : "I am a growth economist at the University of Houston."
+  name   : "Dietrich Vollrath"
+  avatar : "/assets/images/VollrathSmall.jpg"
+  bio    : "Growth economist at the University of Houston."
+  location: "Houston, Texas"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://growthecon.com"
+      url: "https://growthecon.com/minimal"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?hl=en&user=J9ZBVJYAAAAJ"      
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dvollrath"
@@ -66,6 +70,12 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dvollrath"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://growthecon.com/minimal"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?hl=en&user=J9ZBVJYAAAAJ"      
 
 defaults:
   # _posts
@@ -74,18 +84,18 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
   # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
 
 category_archive:
   type: liquid
